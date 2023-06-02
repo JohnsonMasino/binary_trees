@@ -19,7 +19,9 @@ int count_heap_nodes(binary_tree_t *root)
 void bubble_down(heap_t *parent)
 {
 	int temp;
+
 	heap_t *max_child = NULL;
+
 	if (!parent)
 		return;
 	while (parent && parent->left)
@@ -47,6 +49,7 @@ void bubble_down(heap_t *parent)
 heap_t *get_parent(heap_t *root, int index, int pind)
 {
 	heap_t *left = NULL, *right = NULL;
+
 	if (!root || index > pind)
 		return (NULL);
 	if (index == pind)
@@ -95,7 +98,9 @@ void remove_last_node(heap_t **root, heap_t *parent)
 int heap_extract(heap_t **root)
 {
 	int nodes, pind = 0, max_val = 0;
+
 	heap_t *parent;
+
 	if (!root || !(*root))
 		return (0);
 	max_val = (*root)->n;
