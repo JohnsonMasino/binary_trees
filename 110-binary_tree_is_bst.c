@@ -28,7 +28,9 @@ int croos_tree(binary_tree_t *root, binary_tree_t *node)
 	if (root && node)
 	{
 		int aux = 0;
+
 		aux = find_node(root, node);
+
 		if (node->left)
 			aux &= croos_tree(root, node->left);
 		if (node->right)
