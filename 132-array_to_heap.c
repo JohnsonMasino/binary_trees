@@ -10,6 +10,7 @@ heap_t *array_to_heap(int *array, size_t size)
 {
 	heap_t *tree;
 	size_t i;
+
 	tree = NULL;
 	for (i = 0; i < size; i++)
 	{
