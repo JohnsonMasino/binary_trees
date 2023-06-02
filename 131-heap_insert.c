@@ -9,6 +9,7 @@ int height(const binary_tree_t *tree)
 {
 	int left = 0;
 	int right = 0;
+
 	if (tree == NULL)
 		return (-1);
 	left = height(tree->left);
@@ -49,6 +50,7 @@ void swap(heap_t **arg_node, heap_t **arg_child)
 {
 	heap_t *node, *child, *node_child, *node_left, *node_right, *parent;
 	int left_right;
+
 	node = *arg_node, child = *arg_child;
 	if (child->n > node->n)
 	{
@@ -96,6 +98,7 @@ void swap(heap_t **arg_node, heap_t **arg_child)
 heap_t *heap_insert(heap_t **root, int value)
 {
 	heap_t *new_node;
+
 	if (*root == NULL)
 	{
 		*root = binary_tree_node(NULL, value);
