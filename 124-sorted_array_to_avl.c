@@ -12,6 +12,7 @@ avl_t *aux_sort(avl_t *parent, int *array, int begin, int last)
 	avl_t *root;
 	binary_tree_t *aux;
 	int mid = 0;
+
 	if (begin <= last)
 	{
 		mid = (begin + last) / 2;
